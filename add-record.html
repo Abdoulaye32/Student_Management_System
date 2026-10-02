@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Academic Record - Student Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>Student Portal</h2>
+
+        <nav>
+
+            <a href="index.html">
+                Dashboard
+            </a>
+
+            <a href="students.html">
+                Students
+            </a>
+
+            <a href="academic-records.html"
+               class="active">
+                Academic Records
+            </a>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </nav>
+
+        <a href="logout.html" class="logout">
+            Logout
+        </a>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Add Academic Record</h1>
+
+                <p>
+                    Add a student's academic performance
+                </p>
+
+            </div>
+
+
+            <div class="profile">
+
+                <div class="profile-circle">
+                    A
+                </div>
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- FORM -->
+
+        <section class="content-card">
+
+            <h2>Academic Record Information</h2>
+
+            <form class="student-form">
+
+
+                <!-- STUDENT -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Student</label>
+
+                        <select>
+
+                            <option>
+                                Select student
+                            </option>
+
+                            <option>
+                                STU001 - John Doe
+                            </option>
+
+                            <option>
+                                STU002 - Mary Johnson
+                            </option>
+
+                            <option>
+                                STU003 - Michael Smith
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- COURSE -->
+
+                    <div class="form-group">
+
+                        <label>Course</label>
+
+                        <select>
+
+                            <option>
+                                Select course
+                            </option>
+
+                            <option>
+                                Web Development
+                            </option>
+
+                            <option>
+                                Database Systems
+                            </option>
+
+                            <option>
+                                Computer Networks
+                            </option>
+
+                            <option>
+                                Software Engineering
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COURSE CODE / SEMESTER -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Course Code</label>
+
+                        <input
+                            type="text"
+                            placeholder="e.g. CSC201"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Semester</label>
+
+                        <select>
+
+                            <option>
+                                Select semester
+                            </option>
+
+                            <option>
+                                Semester 1
+                            </option>
+
+                            <option>
+                                Semester 2
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SCORE / GRADE -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Score</label>
+
+                        <input
+                            type="number"
+                            placeholder="Enter score"
+                            min="0"
+                            max="100"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Grade</label>
+
+                        <select>
+
+                            <option>
+                                Select grade
+                            </option>
+
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>F</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REMARKS -->
+
+                <div class="form-group full-width">
+
+                    <label>Remarks</label>
+
+                    <textarea
+                        rows="4"
+                        placeholder="Enter any additional remarks">
+                    </textarea>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="form-buttons">
+
+                    <a
+                        href="academic-records.html"
+                        class="cancel-btn"
+                    >
+                        Cancel
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="save-btn"
+                    >
+                        Save Record
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

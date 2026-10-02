@@ -1,0 +1,276 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academic Records - Student Portal</title>
+
+    <link rel="stylesheet" href="{% static 'portal/style.css' %}">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>Student Portal</h2>
+
+        <nav>
+
+            <a href="{% url 'dashboard' %}">
+                Dashboard
+            </a>
+
+            <a href="{% url 'students' %}">
+                Students
+            </a>
+
+            <a href="{% url 'academic_records' %}" class="active">
+                Academic Records
+            </a>
+
+            <a href="{% url 'courses' %}">
+                Courses
+            </a>
+
+            <a href="{% url 'settings' %}">
+                Settings
+            </a>
+
+        </nav>
+
+        <a href="{% url 'logout' %}" class="logout">
+            Logout
+        </a>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Academic Records</h1>
+
+                <p>
+                    Manage student academic performance
+                </p>
+
+            </div>
+
+
+            <div class="profile">
+
+                <div class="profile-circle">
+                    A
+                </div>
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- ACADEMIC RECORDS -->
+
+        <section class="content-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Academic Records</h2>
+
+                    <p>
+                        View student courses, scores and grades
+                    </p>
+
+                </div>
+
+                <a href="add-record.html" class="add-btn">
+                    + Add Record
+                </a>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-area">
+
+                <input
+                    type="text"
+                    placeholder="Search student or course..."
+                >
+
+                <button>
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Student ID</th>
+
+                            <th>Student Name</th>
+
+                            <th>Course</th>
+
+                            <th>Course Code</th>
+
+                            <th>Semester</th>
+
+                            <th>Score</th>
+
+                            <th>Grade</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>STU001</td>
+
+                            <td>John Doe</td>
+
+                            <td>Web Development</td>
+
+                            <td>CSC201</td>
+
+                            <td>Semester 1</td>
+
+                            <td>85</td>
+
+                            <td>
+                                <span class="status-badge active-status">
+                                    A
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <button class="edit-btn">
+                                    Edit
+                                </button>
+
+                                <button class="delete-btn">
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>STU002</td>
+
+                            <td>Mary Johnson</td>
+
+                            <td>Database Systems</td>
+
+                            <td>CSC203</td>
+
+                            <td>Semester 1</td>
+
+                            <td>78</td>
+
+                            <td>
+                                <span class="status-badge active-status">
+                                    B
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <button class="edit-btn">
+                                    Edit
+                                </button>
+
+                                <button class="delete-btn">
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>STU003</td>
+
+                            <td>Michael Smith</td>
+
+                            <td>Computer Networks</td>
+
+                            <td>CSC205</td>
+
+                            <td>Semester 2</td>
+
+                            <td>68</td>
+
+                            <td>
+                                <span class="status-badge active-status">
+                                    C
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <button class="edit-btn">
+                                    Edit
+                                </button>
+
+                                <button class="delete-btn">
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

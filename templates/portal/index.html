@@ -1,0 +1,154 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="{% static 'portal/style.css' %}">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2>Student Portal</h2>
+
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="{% url 'students' %}">Students</a>
+            <a href="academic-records.html">Academic Records</a>
+            <a href="courses.html">Courses</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+
+        <div class="logout">
+            <a href="logout.html">Logout</a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome to the Student Management System</p>
+            </div>
+
+            <div class="profile">
+                <div class="profile-circle">A</div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <small>Admin</small>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- STATISTICS -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p>250</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Courses</h3>
+                <p>24</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Academic Records</h3>
+                <p>680</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Departments</h3>
+                <p>8</p>
+            </div>
+
+        </section>
+
+
+        <!-- RECENT STUDENTS -->
+        <section class="content-card">
+
+            <div class="card-header">
+                <div>
+                    <h2>Recent Students</h2>
+                    <p>Recently registered students</p>
+                </div>
+
+                <a href="add-student.html" class="add-btn">Add Student</a>
+            </div>
+
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Level</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>STU001</td>
+                        <td>Abdulaye Dembele</td>
+                        <td>Computer Science</td>
+                        <td>Level 300</td>
+                        <td><span class="status active-status">Active</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>STU002</td>
+                        <td>John Smith</td>
+                        <td>Software Engineering</td>
+                        <td>Level 200</td>
+                        <td><span class="status active-status">Active</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>STU003</td>
+                        <td>Mary Johnson</td>
+                        <td>Information Technology</td>
+                        <td>Level 400</td>
+                        <td><span class="status inactive-status">Inactive</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>STU004</td>
+                        <td>David Anderson</td>
+                        <td>Computer Science</td>
+                        <td>Level 100</td>
+                        <td><span class="status active-status">Active</span></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

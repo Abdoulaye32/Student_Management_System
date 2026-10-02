@@ -1,0 +1,287 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students - Student Management System</title>
+
+    <link rel="stylesheet" href="{% static 'portal/style.css' %}">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>Student Portal</h2>
+
+        <nav>
+
+            <a href="{% url 'dashboard' %}">
+                Dashboard
+            </a>
+
+            <a href="{% url 'students' %}" class="active">
+                Students
+            </a>
+
+            <a href="{% url 'academic_records' %}">
+                Academic Records
+            </a>
+
+            <a href="{% url 'courses' %}">
+                Courses
+            </a>
+
+            <a href="{% url 'settings' %}">
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="logout">
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Students</h1>
+
+                <p>
+                    Manage student information and records
+                </p>
+
+            </div>
+
+
+            <div class="profile">
+
+                <div class="profile-circle">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>Administrator</strong>
+
+                    <small>
+                        Admin
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- STUDENT MANAGEMENT CARD -->
+
+        <section class="content-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Student List</h2>
+
+                    <p>
+                        View and manage registered students
+                    </p>
+
+                </div>
+
+                <a href="{% url 'add_student' %}" class="add-btn">
+                    + Add Student
+                </a>    
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-area">
+
+                <input
+                    type="text"
+                    placeholder="Search students..."
+                >
+
+                <button>
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- STUDENT TABLE -->
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Student ID</th>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Department</th>
+
+                        <th>Level</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>STU001</td>
+
+                        <td>
+                            Abdulaye Dembele
+                        </td>
+
+                        <td>
+                            abdulaye@email.com
+                        </td>
+
+                        <td>
+                            Computer Science
+                        </td>
+
+                        <td>
+                            Level 300
+                        </td>
+
+                        <td>
+
+                            <a href="student-details.html" class="view-btn">
+                                View
+                            </a>
+
+                            <button class="edit-btn">
+                                Edit
+                            </button>
+
+                            <button class="delete-btn">
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>STU002</td>
+
+                        <td>
+                            John Smith
+                        </td>
+
+                        <td>
+                            john@email.com
+                        </td>
+
+                        <td>
+                            Software Engineering
+                        </td>
+
+                        <td>
+                            Level 200
+                        </td>
+
+                        <td>
+
+                            <a href="student-details.html" class="view-btn">
+                                 View
+                            </a>
+
+                            <button class="edit-btn">
+                                Edit
+                            </button>
+
+                            <button class="delete-btn">
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>STU003</td>
+
+                        <td>
+                            Mary Johnson
+                        </td>
+
+                        <td>
+                            mary@email.com
+                        </td>
+
+                        <td>
+                            Information Technology
+                        </td>
+
+                        <td>
+                            Level 400
+                        </td>
+
+                        <td>
+
+                            <a href="student-details.html" class="view-btn">
+                                View
+                            </a>
+
+                            <button class="edit-btn">
+                                Edit
+                            </button>
+
+                            <button class="delete-btn">
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
